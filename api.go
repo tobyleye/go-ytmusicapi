@@ -269,6 +269,7 @@ func FetchUserPlaylists(httpClient *http.Client, continuation string) (PlaylistP
 	}
 
 	jsonResponse, err := sendRequest(httpClient, html5Client, "browse", body)
+
 	if err != nil {
 		return PlaylistPageResponse{}, err
 	}
